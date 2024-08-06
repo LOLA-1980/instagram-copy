@@ -3,6 +3,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 import { BackendURL } from "./component/backendURL";
 
+import Register from "./component/Auth/Register.jsx";
+import Login from "./component/Auth/Login.jsx";
+import CreatePost from "./component/Posts/CreatePost.jsx";
+import PostItem from "./component/Posts/PostItem.jsx";
+import PostList from "./component/Posts/PostList.jsx";
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
@@ -26,7 +31,12 @@ const Layout = () => {
                     <Navbar />
                     <Routes>
                         <Route element={<Home />} path="/" />
-                        <Route element={<Demo />} path="/demo" />
+                        <Route element={<Register />} path="/register" />
+                        <Route element={<Login />} path="/login" />
+                        <Route element={<CreatePost />} path="/create-post" />
+                        <Route element={<PostItem />} path="/post-item" />
+                        <Route element={<PostList />} path="/posts" />
+                        <Route element={<Demo />} path="/demo" /> 
                         <Route element={<Single />} path="/single/:theid" />
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
